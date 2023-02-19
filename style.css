@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&family=Outfit&display=swap');
+
+:root {
+  --blue: #0C0E11;
+  --green: #00DA3D;
+  --purple: #5280E2;
+
+  --menuheigth: 75px;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  background: var(--blue);
+}
+
+body, button, input, select, textarea {
+  font-family: 'Outfit', sans-serif;
+  color: white;
+}
+
+.title-green {
+  color: var(--green);
+}
+
+.title-purple {
+  color: var(--purple);
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h2{
+  font-size: 24px;
+}
+
+p{
+  color: lightgray;
+}
+
+button {
+  background-color: var(--purple);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 35px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-position: -60px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+header {
+  height: calc(100vh - var(--menuheigth));
+  display: flex;
+  align-items: center;
+}
+
+header .container {
+  width: 50%;
+  height: fit-content;
+  padding: 0 100px;
+}
+
+header .container button {
+  margin-top: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: var(--blue);
+  height: var(--menuheigth);
+  justify-content: space-between;
+  padding: 0 100px;
+  position: sticky;
+  top: 0;
+}
+
+nav img {
+  height: 45px;
+}
+
+nav ul a {
+  font-size: 18px;
+  color: var(--green);
+  padding: 10px;
+  text-decoration: none;
+}
+
+section {
+  height: auto;
+  background: var(--blue);
+}
+
+.about-me {
+  display: flex;
+  padding: 130px;
+}
+
+.about-me .container {
+  width: 50%;
+  padding-right: 100px;
+}
+
+.about-me .img-container  {
+  width: 50%;
+  text-align: center;
+}
+
+.about-me .img-container img{
+  width: 50%;
+}
+ 
+.service {
+  text-align: center;
+  margin: 150px 0px;
+  padding: 0px 100px;
+  padding-top: 38px;
+}
+
+.service-container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.service .service-container .service-card {
+  max-width: 360px;
+  background: #171C22;
+  border: solid 1px var(--green);
+  border-radius: 16px;
+  padding: 40px 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 399px
+}
+
+.service .service-container .service-card img{
+  margin: 15px 0px 40px;
+  width: 80px;
+}
+
+.service-card + .service-card {
+  margin-left: 15px;
+}
+
+.portfolio {
+  padding: 0 100px;
+  text-align: center;
+  background: url(image/image\ 1.svg);
+  margin-bottom: 100px;
+}
+
+.portfolio-container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.portfolio .portfolio-container .portfolio-card {
+width: 290px;
+height: 453px;
+background: rgba(23, 28, 34, 0.6);
+border-radius: 20px;
+
+max-width: 290px;
+text-align: left;
+padding: 50px 25px;
+}
+
+.portfolio-card + .portfolio-card {
+  margin-left: 15px;
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container {
+  margin: 0 15px 30px;
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container {
+  width: 100%;
+}
+
+.portfolio .portfolio-container .portfolio-card .lenguage-container {
+  margin-bottom: 25px;
+}
+
+.portfolio .portfolio-container .portfolio-card .lenguage-container ul{
+  display: flex;
+  padding: 0 10px;
+  list-style: none;
+}
+
+.portfolio .portfolio-container .portfolio-card .lenguage-container li{
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  padding: 3px 10px;
+}
+
+.portfolio .portfolio-container .portfolio-card .lenguage-container li + li{
+  margin-left: 10px;
+}
+
+.portfolio .portfolio-container .portfolio-card p{
+  margin: 10px;
+}
+
+@media(max-width: 1000px) {
+  header .container {
+    width: 100%;
+  }
+
+  nav ul a {
+    font-size: 16px;
+  }
+
+  nav {
+    padding: 0 30px;
+  }
+
+  .about-me {
+    flex-direction: column;
+  }
+
+  .about-me .container, .about-me .img-container {
+    width: 100%;
+  }
+
+  .about-me .container {
+    padding-right: 0;
+  }
+
+  .about-me .img-container {
+    margin: 70px 0;
+  }
+
+  .service {
+    padding: 0;
+  }
+
+  .service .service-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card{
+    height: 394px;
+  }
+
+  .service-card + .service-card {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+}
