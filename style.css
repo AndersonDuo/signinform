@@ -4,22 +4,37 @@
   --blue: #0C0E11;
   --green: #00DA3D;
   --purple: #5280E2;
+  --yellow: #E6AD10;
+  --rosa: #CE43FF;
 
   --menuheigth: 75px;
 }
 
 * {
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   background: var(--blue);
 }
 
-body, button, input, select, textarea {
+body,
+button,
+input,
+select,
+textarea {
   font-family: 'Outfit', sans-serif;
   color: white;
+}
+
+.title-yellow {
+  color: var(--yellow);
+}
+
+.title-rosa {
+  color: var(--rosa);
 }
 
 .title-green {
@@ -34,23 +49,39 @@ h1 {
   font-size: 44px;
 }
 
-h2{
+h2 {
   font-size: 24px;
 }
 
-p{
+p {
   color: lightgray;
 }
 
 button {
-  background-color: var(--purple);
-  color: #fff;
+  background-color: var(--green);
+  color: #000;
   border: none;
   border-radius: 4px;
   font-weight: bold;
   font-size: 18px;
   padding: 8px 35px;
   cursor: pointer;
+}
+
+.secondary-button {
+  background-color: var(--blue);
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  font-weight: bold;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+}
+
+.secondary-button img {
+  margin-right: 15px;
 }
 
 button:hover {
@@ -73,6 +104,15 @@ header .container {
 
 header .container button {
   margin-top: 50px;
+}
+
+header .img-container {
+  width: 50%;
+  text-align: center;
+}
+
+header.img-container img {
+  width: 50%;
 }
 
 nav {
@@ -114,20 +154,20 @@ section {
   padding-right: 100px;
 }
 
-.about-me .img-container  {
+.about-me .img-container {
   width: 50%;
   text-align: center;
 }
 
-.about-me .img-container img{
+.about-me .img-container img {
   width: 50%;
 }
- 
+
 .service {
   text-align: center;
   margin: 150px 0px;
   padding: 0px 100px;
-  padding-top: 38px;
+  padding-top: 50px;
 }
 
 .service-container {
@@ -153,21 +193,21 @@ section {
   height: 399px
 }
 
-.service .service-container .service-card img{
+.service .service-container .service-card img {
   margin: 15px 0px 40px;
   width: 80px;
 }
 
-.service-card + .service-card {
+.service-card+.service-card {
   margin-left: 15px;
 }
 
 .portfolio {
-  padding: 0 100px;
+  padding: 0 46px;
   text-align: center;
   background: url(image/image\ 1.svg);
   margin-bottom: 100px;
-  padding-top: 38px;
+  padding-top: 50px;
 }
 
 .portfolio-container {
@@ -179,17 +219,17 @@ section {
 }
 
 .portfolio .portfolio-container .portfolio-card {
-width: 290px;
-height: 453px;
-background: rgba(23, 28, 34, 0.6);
-border-radius: 20px;
+  width: 290px;
+  height: 453px;
+  background: rgba(23, 28, 34, 0.6);
+  border-radius: 20px;
 
-max-width: 290px;
-text-align: left;
-padding: 50px 25px;
+  max-width: 290px;
+  text-align: left;
+  padding: 50px 25px;
 }
 
-.portfolio-card + .portfolio-card {
+.portfolio-card+.portfolio-card {
   margin-left: 15px;
 }
 
@@ -205,27 +245,98 @@ padding: 50px 25px;
   margin-bottom: 25px;
 }
 
-.portfolio .portfolio-container .portfolio-card .lenguage-container ul{
+.portfolio .portfolio-container .portfolio-card .lenguage-container ul {
   display: flex;
   padding: 0 10px;
   list-style: none;
 }
 
-.portfolio .portfolio-container .portfolio-card .lenguage-container li{
+.portfolio .portfolio-container .portfolio-card .lenguage-container li {
   color: var(--purple);
   border: 1px solid var(--purple);
   border-radius: 8px;
   padding: 3px 10px;
 }
 
-.portfolio .portfolio-container .portfolio-card .lenguage-container li + li{
+.portfolio .portfolio-container .portfolio-card .lenguage-container li+li {
   margin-left: 10px;
 }
 
-.portfolio .portfolio-container .portfolio-card p{
+.portfolio .portfolio-container .portfolio-card p {
   margin: 10px;
 }
 
+.curriculum {
+  padding: 0 120px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.curriculum .container {
+  display: flex;
+  margin: 50px 0;
+  max-width: 1200px;
+}
+
+.curriculum .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+}
+
+.curriculum .container .content .curriculum-info {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-gap: 0.5rem;
+  margin-bottom: 50px;
+  margin-left: 180px;
+}
+
+.contact {
+  max-width: 800px;
+  margin: 150px auto 70px auto;
+  text-align: center;
+}
+
+.contact h1 {
+  width: fit-content;
+  margin: 0 auto 40px auto;
+  background: linear-gradient(188.37deg, #00DA3D 6.41%, #6DFF96 93.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact button {
+  margin: 40px auto;
+}
+
+.contact .icone-media {
+  max-width: 274px;
+  margin: 60px auto 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.25);
+}
+
+footer p {
+  font-size: 12px;
+  color: #3C4553;
+  padding: 15px;
+}
+
+
+/*Small Desktop*/
 @media(max-width: 1000px) {
   header .container {
     width: 100%;
@@ -243,7 +354,8 @@ padding: 50px 25px;
     flex-direction: column;
   }
 
-  .about-me .container, .about-me .img-container {
+  .about-me .container,
+  .about-me .img-container {
     width: 100%;
   }
 
@@ -265,12 +377,23 @@ padding: 50px 25px;
     align-items: center;
   }
 
-  .service-card{
+  .service-card {
     height: 394px;
   }
 
-  .service-card + .service-card {
+  .service-card+.service-card {
     margin-left: 0px;
     margin-top: 15px;
+  }
+
+  .curriculum .container {
+    flex-wrap: wrap;
+  }
+
+  .curriculum .container .curriculum-img {
+    display: block;
+    margin: 0 auto 50px;
+    width: 100%;
+    max-width: 520px;
   }
 }
